@@ -32,7 +32,8 @@ body{
 	margin: auto;
 	display: flex;
 	align-items: center;
-	gap: .5em;
+	gap: .5rem;
+    padding: 2.5%;
 }
 
 /*main*/
@@ -43,13 +44,10 @@ body{
     background: #f3f5fc;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .texto {
 	width: 100%;
-	max-height: 350px;
-	min-height: 50px;
 	background: transparent;
 	border: none;
 	outline: none;
@@ -61,8 +59,9 @@ body{
 
   
 .encriptar{
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100%;
     padding: 5%;
     gap: 8px;
@@ -93,6 +92,7 @@ body{
 	padding: .8rem;
 	flex-wrap: wrap;
 	gap: .8rem;
+    
 }
 
 .button__encriptar,
@@ -118,6 +118,19 @@ body{
 	color: var(--color-blue);
 	width: 100%;
 	min-width: 100px;
+}
+
+.contenido{ 
+    min-height: 101px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.terminos{
+    display: flex;
+    justify-content: start;
+
 }
 
 .footer{
