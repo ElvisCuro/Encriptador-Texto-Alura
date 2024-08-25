@@ -39,8 +39,11 @@ body{
 .container {
     margin: auto 40px auto auto;
     width: 90%;
-    height: 100%;
+    height: 100vh;
     background: #f3f5fc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .texto {
@@ -56,23 +59,14 @@ body{
 	font-family: 'Space Mono', monospace;
   }
 
-.footer{
-    color:var(--color-primario);
-    background-color: var(--color-lightBlue);
-    padding: 24px;
-    text-align: center;
-    font-family: var(--fuente-krona);
-    font-size: 1.5rem;
-    font-weight: 400;
-}
-
+  
 .encriptar{
-    display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2%;
+    height: 100%;
+    padding: 5%;
     gap: 8px;
-    width: 25%;
+    width: 100%;
     background-color: #0a3871;
     border-radius: 24px;
     font-family: "Inter";
@@ -80,22 +74,19 @@ body{
     line-height: 19px;
     text-align: center;
     color: #fff;
-    flex-direction: column;
 }
 
-.encriptado{
-    display: flex;
-    justify-content: center;
+.encriptado {
     width: 30%;
-    height: 90%;
-    left: 60%;
-    top: 5%;
+    height: 100vh;
     background: #fff;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-    border-radius: 32px;
-    flex-direction: column;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    gap: 20px; /* Espacio entre los elementos, ajusta según lo necesario */
 }
-
 .botones {
 	display: flex;
 	justify-content: space-evenly;
@@ -106,7 +97,7 @@ body{
 
 .button__encriptar,
 .button__desencriptar {
-	width: 45%;
+    width: 45%;
 	max-width: 328px;
 	min-width: 160px;
 	height: 67px;
@@ -119,13 +110,22 @@ body{
 	color: white;
 }
 .button__desencriptar {
-	background: var(--color-lightBlue2);
+    background: var(--color-lightBlue2);
 	color: var(--color-blue);
 }
 .button__copiar{
-	background: none;
+    background: none;
 	color: var(--color-blue);
 	width: 100%;
 	min-width: 100px;
 }
 
+.footer{
+    color:var(--color-primario);
+    background-color: var(--color-lightBlue);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}

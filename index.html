@@ -17,7 +17,8 @@
 
     <main>
         <div class="container">
-            <div class="encriptar">
+
+            <section class="encriptar">
               <textarea
                 name="texto"
                 class="texto"
@@ -41,12 +42,18 @@
                 />
               </div>
 
-            </div>
+            </section>
 
             <section class="encriptado" id="encriptado">
-                <img id="munheco" class="munheco" src="./assets/Muñeco.png" alt="Ningún mensaje fue encontrado. Ingresa el texto que desees encriptar o desencriptar.">
-                <textarea id="textoFinal" class="textoFinal" placeholder="Ningún mensaje fue encontrado"></textarea>
+                <img id="munheco" class="muñeco" src="./assets/Muñeco.png" alt="Ningún mensaje fue encontrado. Ingresa el texto que desees encriptar o desencriptar.">
+                <textarea 
+                id="textoFinal" 
+                class="textoFinal" 
+                placeholder="Ningún mensaje fue encontrado">
+                </textarea>
+
                 <p id="textoInfo" class="info">Ingresa el texto que desees encriptar o desencriptar.</p>
+
                 <button class="button__copiar bn_ocultar" id="button__copiar">Copiar</button>
             </section>
 
