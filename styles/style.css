@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+	--color-primario: #0A3871;
+	--color-secundario: #495057;
+	--color-terciario: #343A40;
+
+	--color-lightBlue: #F3F5FC ;
+	--color-lightBlue2: #D8DFE8;
+
+    --fuente-krona: 'Krona One', sans-serif;
+    --fuente-montserrat: 'Montserrat', sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	letter-spacing: 1px;
+	line-height: 1.3;
+	font-family: 'IBM Plex Serif', serif;
+	text-decoration: none;
+}
+
+body{
+    background-color: var(--color-lightBlue);
+}
+
+.header {
+	width: 90%;
+	height: auto;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	gap: .5em;
+}
+
+/*main*/
+.container {
+    margin: auto 40px auto auto;
+    width: 90%;
+    height: 100%;
+    background: #f3f5fc;
+}
+
+.texto {
+	width: 100%;
+	max-height: 350px;
+	min-height: 50px;
+	background: transparent;
+	border: none;
+	outline: none;
+	resize: none;
+	font-size: 32px;
+	color: var(--color-blue);
+	font-family: 'Space Mono', monospace;
+  }
+
+.footer{
+    color:var(--color-primario);
+    background-color: var(--color-lightBlue);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.encriptar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    background-color: #0a3871;
+    border-radius: 24px;
+    font-family: "Inter";
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: #fff;
+    flex-direction: column;
+}
+
+.encriptado{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    height: 90%;
+    left: 60%;
+    top: 5%;
+    background: #fff;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    flex-direction: column;
+}
+
+.botones {
+	display: flex;
+	justify-content: space-evenly;
+	padding: .8rem;
+	flex-wrap: wrap;
+	gap: .8rem;
+}
+
+.button__encriptar,
+.button__desencriptar {
+	width: 45%;
+	max-width: 328px;
+	min-width: 160px;
+	height: 67px;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 24px;
+	border: none;
+	outline: 1px solid var(--color-blue);
+	background: var(--color-blue);
+	color: white;
+}
+.button__desencriptar {
+	background: var(--color-lightBlue2);
+	color: var(--color-blue);
+}
+.button__copiar{
+	background: none;
+	color: var(--color-blue);
+	width: 100%;
+	min-width: 100px;
+}
+

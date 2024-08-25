@@ -8,9 +8,11 @@
     <script src="app.js"></script>
 </head>
 <body>
-    <header>
-        <img src="./assets/Logo.png" alt="Logo Alura">
 
+    <header>
+        <div class="header"> 
+            <img src="./assets/Logo.png" alt="Logo Alura">
+        </div>
     </header>
 
     <main>
@@ -30,12 +32,10 @@
               </div>
 
               <div class="botones">
-                <button class="btn-encriptar" type="button" onclick="encriptar()">
-                  Encriptar
-                </button>
+                <button id="button__encriptar" class="button__encriptar">Encriptar</button>
                 <input
                   type="button"
-                  class="btn-desencriptar"
+                  class="button__desencriptar"
                   value="Desencriptar"
                   onclick="desencriptar()"
                 />
@@ -43,15 +43,12 @@
 
             </div>
 
-            <div class="encriptado">
-              <img src="assets/Muñeco.png" alt="" id="muñeco" />
-              <div class="mensaje-encriptado" id="mensaje-encriptado">
-                <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
-                <p id="parrafo">
-                  Ingresa el texto que deseas encriptar o desencriptar
-                </p>
-              </div>
-            </div>
+            <section class="encriptado" id="encriptado">
+                <img id="munheco" class="munheco" src="./assets/Muñeco.png" alt="Ningún mensaje fue encontrado. Ingresa el texto que desees encriptar o desencriptar.">
+                <textarea id="textoFinal" class="textoFinal" placeholder="Ningún mensaje fue encontrado"></textarea>
+                <p id="textoInfo" class="info">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button class="button__copiar bn_ocultar" id="button__copiar">Copiar</button>
+            </section>
 
           </div>
 
