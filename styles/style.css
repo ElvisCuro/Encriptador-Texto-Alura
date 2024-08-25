@@ -80,11 +80,15 @@ body{
     height: 100vh;
     background: #fff;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
     display: flex;
     flex-direction: column; /* Organiza los elementos en una columna */
     justify-content: center; /* Centra los elementos verticalmente */
     align-items: center; /* Centra los elementos horizontalmente */
-    gap: 20px; /* Espacio entre los elementos, ajusta según lo necesario */
+    padding: 16px;
+    gap: 32px;
+    
+    
 }
 .botones {
 	display: flex;
@@ -96,7 +100,8 @@ body{
 }
 
 .button__encriptar,
-.button__desencriptar {
+.button__desencriptar,
+.button__copiar {
     width: 45%;
 	max-width: 328px;
 	min-width: 160px;
@@ -105,19 +110,23 @@ body{
 	font-weight: bold;
 	border-radius: 24px;
 	border: none;
-	outline: 1px solid var(--color-blue);
+	outline: 1px solid var(--color-primario);
 	background: var(--color-blue);
 	color: white;
 }
 .button__desencriptar {
     background: var(--color-lightBlue2);
-	color: var(--color-blue);
+	color: var(--color-primario);
 }
 .button__copiar{
     background: none;
-	color: var(--color-blue);
+	color: var(--color-primario);
 	width: 100%;
 	min-width: 100px;
+}
+
+.bn_ocultar{
+    display: none;
 }
 
 .contenido{ 
@@ -142,3 +151,32 @@ body{
     font-size: 1.5rem;
     font-weight: 400;
 }
+.info {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	text-align: center;
+	font-size: 16px;
+	color: var(--color-grey);
+}
+
+.ajustar {
+	height: auto;
+	min-height: calc(100% - 67px - 32px);
+	pointer-events: all;
+	text-align: left;
+	overflow: auto;
+}
+
+.ajuste{
+	justify-content: space-between;
+}
+
+.muñeco{
+	min-width: 230px;
+	width: 50%;
+}
+.ocultar{
+	display: none;
+}
+
