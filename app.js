@@ -8,6 +8,13 @@ const muñeco = document.getElementById("muñeco");
 const textInfo = document.getElementById("textoInfo");
 const rigth = document.getElementById("encriptado")
 
+let remplazar = [
+    ["e", "enter"],
+    ["o", "ober"],
+    ["i", "imes"],
+    ["a", "ai"],
+    ["u", "ufat"]
+];
 const remplace = (newvalue) => {
 	textFinal.innerHTML = newvalue;
 	textFinal.classList.add("ajustar");
@@ -20,13 +27,19 @@ const remplace = (newvalue) => {
 
 }
 
-let remplazar = [
-	["e", "enter"],
-	["o", "ober"],
-	["i", "imes"],
-	["a", "ai"],
-	["u", "ufat"]
-];
+const reset = () => {
+	textoInicial.value = "";
+    textoInicial.style.height = "auto";
+	textFinal.innerHTML = "";
+	rigth.classList.remove("ajuste")
+	textFinal.classList.remove("ajustar");
+	muñeco.classList.remove("ocultar");
+	textFinal.placeholder = "Ningún mensaje fue encontrado";
+	textInfo.classList.remove("ocultar")
+	copy.classList.add("bn_ocultar");
+	textoInicial.focus();
+};
+
 
 
 encriptar.addEventListener('click', () => {
@@ -47,4 +60,31 @@ encriptar.addEventListener('click', () => {
 		alert("Ingrese texto para encriptar");
 		reset();
 	};
+});
+
+desencriptar.addEventListener('click', () => {
+
+	const texto = textoInicial.value;
+
+	if (texto != "") {
+		function desencript(newtext) {
+			for (let i = 0; i < remplazar.length; i++) {
+				if (newtext.includes(remplazar[i][1])) {
+					newtext = newtext.replaceAll(remplazar[i][1], remplazar[i][0]);
+				};
+			};
+			return newtext;
+		};
+		remplace(desencript(texto));
+	} else {
+		alert("Ingrese texto a desencriptar");
+		reset();
+	};
+});
+
+copy.addEventListener("click", () => {
+	let texto = textFinal;
+    navigator.clipboard.writeText(texto.value);
+	alert("Texto Copiado");
+	reset();
 });
