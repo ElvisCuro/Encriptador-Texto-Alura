@@ -14,7 +14,7 @@
     /* Colores Modo Oscuro */
     --color-dark-primario: #F6DCAC;
     --color-dark-secundario: #69747f;
-    --color-dark-terciario: #ffea00;
+    --color-dark-terciario: #efe143;
     --color-dark-cuaternario: #01204E;
 
     --color-dark-bg: #028391;
@@ -65,7 +65,7 @@ body{
 .container {
     margin: auto;
     width: 80%; 
-    height: 100vh;
+    height: 100%;
     background: var(--color-lightBlue2);
     display: flex;
 }
@@ -75,7 +75,7 @@ body{
     flex-direction: column;
     margin-left: 12%; 
     width: 100%; 
-    height: 100vh;
+    height: 100%;
     padding: 1.5%;
     gap: 8px;
     background-color: var(--color-lightBlue2);
@@ -101,7 +101,7 @@ body{
 
 .encriptado {
     width: 30%;
-    height: 100%;
+    height: auto;
     background: var(--color-lightBlue);
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
