@@ -88,3 +88,4 @@ copy.addEventListener("click", () => {
 	alert("Texto Copiado");
 	reset();
 });
+
