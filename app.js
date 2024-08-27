@@ -8,6 +8,10 @@ const muñeco = document.getElementById("muñeco");
 const textInfo = document.getElementById("textoInfo");
 const encriptado = document.getElementById("encriptado")
 
+const toggleThemeButton = document.getElementById("toggleTheme");
+const body = document.body;
+
+
 let remplazar = [
     ["e", "enter"],
     ["o", "ober"],
@@ -25,7 +29,7 @@ const remplace = (newvalue) => {
 	textInfo.classList.add("ocultar");
 	copy.classList.remove("bn_ocultar");
     encriptado.classList.remove("ajuste")
-
+	
 }
 
 const reset = () => {
@@ -41,10 +45,21 @@ const reset = () => {
 	textoInicial.focus();
 };
 
+toggleThemeButton.addEventListener("click", () => {
+	body.classList.toggle("dark-theme");
+
+	// Cambia el texto del botón según el modo actual
+	if (body.classList.contains("dark-theme")) {
+		toggleThemeButton.textContent = "Modo Claro";
+	} else {
+		toggleThemeButton.textContent = "Modo Oscuro";
+	}
+})
+
 encriptar.addEventListener('click', () => {
 
 	const texto = textoInicial.value;
-
+	
 	if (texto != "") {
 		function encript(newtext) {
 			for (let i = 0; i < remplazar.length; i++) {
@@ -62,9 +77,9 @@ encriptar.addEventListener('click', () => {
 });
 
 desencriptar.addEventListener('click', () => {
-
+	
 	const texto = textoInicial.value;
-
+	
 	if (texto != "") {
 		function desencript(newtext) {
 			for (let i = 0; i < remplazar.length; i++) {
@@ -86,5 +101,8 @@ copy.addEventListener("click", () => {
     navigator.clipboard.writeText(texto.value);
 	alert("Texto Copiado");
 	reset();
-});
+}
+
+
+);
 
