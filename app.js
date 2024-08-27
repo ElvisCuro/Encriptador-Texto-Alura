@@ -6,7 +6,7 @@ const textFinal = document.getElementById("textoOutput");
 const copy = document.getElementById("button__copiar");
 const muñeco = document.getElementById("muñeco");
 const textInfo = document.getElementById("textoInfo");
-const rigth = document.getElementById("encriptado")
+const encriptado = document.getElementById("encriptado")
 
 let remplazar = [
     ["e", "enter"],
@@ -15,6 +15,7 @@ let remplazar = [
     ["a", "ai"],
     ["u", "ufat"]
 ];
+
 const remplace = (newvalue) => {
 	textFinal.innerHTML = newvalue;
 	textFinal.classList.add("ajustar");
@@ -23,7 +24,7 @@ const remplace = (newvalue) => {
 	muñeco.classList.add("ocultar");
 	textInfo.classList.add("ocultar");
 	copy.classList.remove("bn_ocultar");
-    rigth.classList.remove("ajuste")
+    encriptado.classList.remove("ajuste")
 
 }
 
@@ -31,7 +32,7 @@ const reset = () => {
 	textoInicial.value = "";
     textoInicial.style.height = "auto";
 	textFinal.innerHTML = "";
-	rigth.classList.remove("ajuste")
+	encriptado.classList.remove("ajuste")
 	textFinal.classList.remove("ajustar");
 	muñeco.classList.remove("ocultar");
 	textFinal.placeholder = "Ningún mensaje fue encontrado";
@@ -39,8 +40,6 @@ const reset = () => {
 	copy.classList.add("bn_ocultar");
 	textoInicial.focus();
 };
-
-
 
 encriptar.addEventListener('click', () => {
 
