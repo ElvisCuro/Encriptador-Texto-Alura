@@ -162,8 +162,13 @@ body{
     justify-content: space-between;
 }
 
-.links{
+.links {
     gap: 1%;
+}
+
+.links svg {
+    width: 1.5vw; /* Ajusta el tamaño según el ancho de la ventana */
+    height: 1.5vw;
 }
 
 .info {
@@ -199,6 +204,8 @@ body{
 	resize: none;
 	pointer-events: none;
 	font-family: 'Space Mono', monospace;
+    font-weight: bold;
+    font-family: 'Inter', monospace;
 }
 
 .textoFinal::placeholder{
